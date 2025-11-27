@@ -30,8 +30,9 @@ jobs:
 
     - name: Deploy to VPS (move build output)
       run: |
-        sudo rm -rf /apps/release-client/*
-        sudo cp -r build/* /apps/release-client/
+        sudo rm -rf /home/chamalka/apps/release-client/*
+        sudo cp -r build/* /home/chamalka/apps/release-client/
+
 
     - name: Restart NGINX
       run: sudo systemctl restart nginx
