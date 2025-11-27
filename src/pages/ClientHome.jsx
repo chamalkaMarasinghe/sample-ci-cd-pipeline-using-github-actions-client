@@ -1,4 +1,5 @@
 import React from 'react';
+import { CONFIGURATIONS } from "../config/envConfig"
 
 const ClientHome = () => {
   return (
@@ -7,6 +8,9 @@ const ClientHome = () => {
         <h1 className="mt-24 mb-4 text-4xl font-bold text-left text-primary">
           Welcome to my
         </h1>
+        <div className='text-white'>
+          {CONFIGURATIONS.API_BASE_URL}
+        </div>
       </div>
     </>
   );
