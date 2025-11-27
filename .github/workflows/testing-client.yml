@@ -30,8 +30,8 @@ jobs:
 
     - name: Deploy to VPS (move build output)
       run: |
-        sudo rm -rf /apps/testing-client/current/*
-        sudo cp -r build/* /apps/testing-client/current/
+        sudo rm -rf /apps/release-client/*
+        sudo cp -r build/* /apps/release-client/
 
     - name: Restart NGINX
       run: sudo systemctl restart nginx
