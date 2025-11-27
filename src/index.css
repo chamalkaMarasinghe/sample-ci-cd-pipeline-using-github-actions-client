@@ -17,7 +17,7 @@ body {
   background-color: var(--primary-color);
 }
 
-/* Custom Pagination Dots */
+/* Custom Pagination Dots. */
 .custom-pagination {
   display: flex;
   justify-content: center;
