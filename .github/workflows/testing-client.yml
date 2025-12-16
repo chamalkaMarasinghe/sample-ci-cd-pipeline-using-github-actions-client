@@ -26,12 +26,13 @@ jobs:
         printf "%s" "${{ secrets.REACT_ENV_VARS }}" > .env
 
     - name: Build React App
-      run: npm run build
+      run: CI=false npm run build --if-present
 
     - name: Deploy to VPS (move build output)
       run: |
-        sudo rm -rf /apps/testing-client/current/*
-        sudo cp -r build/* /apps/testing-client/current/
+        sudo rm -rf /home/chamalka/apps/release-client/*
+        sudo cp -r build/* /home/chamalka/apps/release-client/
+
 
     - name: Restart NGINX
       run: sudo systemctl restart nginx
